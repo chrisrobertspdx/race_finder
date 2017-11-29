@@ -1,5 +1,7 @@
 require "race_finder/version"
 
 module RaceFinder
-  # Your code goes here...
+  def self.say_hello
+      puts "Hello"
+  end
 end
