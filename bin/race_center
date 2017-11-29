@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+require 'pry'
+require 'nokogiri'
+require 'open-uri'
+
+require "bundler/setup"
+require "race_finder"
+require "race_finder/cli"
+require "race_finder/calendar"
+require "race_finder/race"
+require "race_finder/scraper"
+
+RaceFinder::CLI.new.run
