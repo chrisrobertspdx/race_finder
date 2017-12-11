@@ -7,9 +7,6 @@ class RaceFinder::CLI
     add_races_to_calendar
     list_races
     menu
-    #ask for selection
-    #add_attributes_to_races
-    #display_recs
   end
   
   def add_races_to_calendar
@@ -18,7 +15,6 @@ class RaceFinder::CLI
     race_data.each {|d|
       self.calendar.races << RaceFinder::Race.new(d)
     }
-
   end
     
   def list_races
@@ -30,6 +26,7 @@ class RaceFinder::CLI
   def menu
     input = ""
     while input != "exit"
+      puts "Enter exit, list or a race number."
       puts "Which race would you like to know more about? "
       input = gets.strip
       case input
